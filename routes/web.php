@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/listar_usuarios', [App\Http\Controllers\HomeController::class, 'listar'])->name('listar_usuarios');
+Route::resource('users', 'App\Http\Controllers\UserController');
